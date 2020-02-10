@@ -5,6 +5,11 @@ set encoding=utf-8
 syntax on
 set number
 set backspace=indent,eol,start
+set history=200
+set suffixes+=.pyc " Ignore the files when tab-completing
+set tabstop=4
+set softtabstop=4
+set expandtab
 
 " Disable the default Vim startup message.
 set shortmess+=I
@@ -22,8 +27,6 @@ set smartcase
 set incsearch
 set hlsearch            " highlight matches
 
-" turn off search highlight
-nnoremap <leader><space> :nohlsearch<CR>
 
 " Enable mouse support
 set mouse+=a
@@ -43,6 +46,10 @@ Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'jiangmiao/auto-pairs'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
 
 " Initialize plugin system
 call plug#end()
@@ -50,8 +57,29 @@ call plug#end()
 
 let mapleader=" "       " leader is space
 
+" turn off search highlight
+nnoremap <leader><space> :nohlsearch<CR>
+
 " jk is escape
 inoremap jk <esc>
+
+" Move between open buffers
+nmap <C-n> :bnext<CR>
+nmap <C-p> :bprev<CR>
+
+" faster window shortcuts
+nmap <C-j> <C-W>j
+nmap <C-k> <C-W>k
+nmap <C-h> <C-W>h
+nmap <C-l> <C-W>l
+
+
+map <leader>n :NERDTreeToggle<CR>
+let NERDTreeIgnore=['\.pyc$', '\~$'] " ignore .pyc files
+let NERDTreeShowHidden=1 " show . files
+
+" close vim if the only window is nerdtree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " one dark theme
 colorscheme onedark
