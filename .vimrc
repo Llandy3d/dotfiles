@@ -50,6 +50,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
+Plug 'junegunn/fzf', { 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 " Initialize plugin system
 call plug#end()
@@ -72,6 +74,14 @@ nmap <C-j> <C-W>j
 nmap <C-k> <C-W>k
 nmap <C-h> <C-W>h
 nmap <C-l> <C-W>l
+
+
+nmap <leader>f :Files<cr>    " fuzzy find files in the working directory
+nmap <leader>/ :BLines<cr>   " fuzzy find lines in the current buffer
+nmap <leader>b :Buffers<cr>  " fuzzy find an open buffer
+nmap <leader>r :Rg<cr>       " fuzzy find text in the working directory
+nmap <leader>c :Commands<cr> " fuzzy find Vim commands
+nmap <leader>h :History<cr>  " fuzzy find history
 
 
 map <leader>n :NERDTreeToggle<CR>
