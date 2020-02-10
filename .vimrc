@@ -76,12 +76,19 @@ nmap <C-h> <C-W>h
 nmap <C-l> <C-W>l
 
 
+" fzf bindings
 nmap <leader>f :Files<cr>    " fuzzy find files in the working directory
 nmap <leader>/ :BLines<cr>   " fuzzy find lines in the current buffer
 nmap <leader>b :Buffers<cr>  " fuzzy find an open buffer
 nmap <leader>r :Rg<cr>       " fuzzy find text in the working directory
 nmap <leader>c :Commands<cr> " fuzzy find Vim commands
 nmap <leader>h :History<cr>  " fuzzy find history
+
+" Preview window when using Rg
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview(), <bang>0)
 
 
 map <leader>n :NERDTreeToggle<CR>
@@ -115,3 +122,4 @@ if 'VIRTUAL_ENV' in os.environ:
     if site_packages:
         sys.path.insert(0, str(site_packages))
 EOF
+
