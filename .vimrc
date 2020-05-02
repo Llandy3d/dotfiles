@@ -7,6 +7,7 @@ set number
 set backspace=indent,eol,start
 set history=200
 set suffixes+=.pyc " Ignore the files when tab-completing
+filetype plugin indent on
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
