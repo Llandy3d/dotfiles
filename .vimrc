@@ -9,6 +9,7 @@ set history=200
 set suffixes+=.pyc " Ignore the files when tab-completing
 set tabstop=4
 set softtabstop=4
+set shiftwidth=4
 set expandtab
 
 " Disable the default Vim startup message.
