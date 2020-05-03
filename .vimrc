@@ -63,6 +63,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'junegunn/fzf', { 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'dense-analysis/ale'
 
 " Initialize plugin system
 call plug#end()
@@ -123,6 +124,11 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
+" linting configuration
+let g:ale_linters = {
+\   'python': ['flake8'],
+\}
+
 " virtualenv support 
 " NOTE: to be tested
 py3 << EOF
@@ -133,4 +139,3 @@ if 'VIRTUAL_ENV' in os.environ:
     if site_packages:
         sys.path.insert(0, str(site_packages))
 EOF
-
