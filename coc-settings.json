@@ -1,5 +1,5 @@
 {
-	  "python.jediEnabled": false,
+    "python.jediEnabled": false,
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
     "coc.preferences.diagnostic.displayByAle": false
