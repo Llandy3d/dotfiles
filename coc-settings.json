@@ -2,5 +2,12 @@
     "python.jediEnabled": false,
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
-    "coc.preferences.diagnostic.displayByAle": false
+    "coc.preferences.diagnostic.displayByAle": false,
+    "languageserver": {
+        "golang": {
+          "command": "~/go/bin/gopls",
+          "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+          "filetypes": ["go"]
+    }
+  }
 }
