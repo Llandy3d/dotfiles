@@ -65,6 +65,7 @@ Plug 'junegunn/fzf', { 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 "Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 
 " Initialize plugin system
 call plug#end()
@@ -140,6 +141,13 @@ if 'VIRTUAL_ENV' in os.environ:
     if site_packages:
         sys.path.insert(0, str(site_packages))
 EOF
+
+
+" vim-go
+
+" disable vim-go :GoDef short cut (gd)
+" this will be handled by coc 
+let g:go_def_mapping_enabled = 0
 
 """"""""""""""""""""""""""
 " Coc
