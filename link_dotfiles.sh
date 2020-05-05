@@ -3,3 +3,4 @@ ln -s $(pwd)/.vimrc $HOME/
 ln -s $(pwd)/.inputrc $HOME/
 ln -s $(pwd)/.pythonrc.py $HOME/
 ln -s $(pwd)/flake8 $HOME/.config/
+rm $HOME/.bashrc && ln -s $(pwd)/.bashrc $HOME/
