@@ -2,6 +2,7 @@
     "python.jediEnabled": false,
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
+    "python.linting.flake8Path": "~/bin/flake8",
     "coc.preferences.diagnostic.displayByAle": false,
     "languageserver": {
         "golang": {
