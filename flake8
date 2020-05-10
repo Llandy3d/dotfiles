@@ -1,5 +1,5 @@
 [flake8]
-#ignore = E501  # Ignore line too long errors
+ignore = E501  # Ignore line too long errors
 exclude =
     .git,
     __pycache__,
