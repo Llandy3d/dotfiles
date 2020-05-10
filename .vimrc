@@ -63,7 +63,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'junegunn/fzf', { 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-"Plug 'dense-analysis/ale'
+Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 
@@ -127,9 +127,10 @@ if (has("termguicolors"))
 endif
 
 " linting configuration
-" let g:ale_linters = {
-" \   'python': ['flake8'],
-" \}
+" Use ale for having linting without saving the buffer
+let g:ale_linters = {
+\   'python': ['flake8'],
+\}
 
 " virtualenv support 
 " NOTE: to be tested

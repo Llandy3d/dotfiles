@@ -3,7 +3,7 @@
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
     "python.linting.flake8Path": "~/bin/flake8",
-    "coc.preferences.diagnostic.displayByAle": false,
+    "coc.preferences.diagnostic.displayByAle": true,
     "languageserver": {
         "golang": {
           "command": "~/go/bin/gopls",
