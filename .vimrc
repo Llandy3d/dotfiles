@@ -89,6 +89,8 @@ nmap <C-k> <C-W>k
 nmap <C-h> <C-W>h
 nmap <C-l> <C-W>l
 
+" Esc in terminal goes into normal mode
+tnoremap <esc> <C-\><C-n>
 
 " fzf bindings
 nmap <leader>f :Files<cr>    " fuzzy find files in the working directory
