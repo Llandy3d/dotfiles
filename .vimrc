@@ -235,7 +235,8 @@ endfunction
 
 
 " Symbol renaming.
-nmap <leader>rn <Plug>(coc-rename)
+" not feeling the need for this and it is slowing the Rg search
+" nmap <leader>rn <Plug>(coc-rename)
 
 
 augroup mygroup
