@@ -106,6 +106,8 @@ command! -bang -nargs=* Rg
   \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
   \   fzf#vim#with_preview(), <bang>0)
 
+" fzf :Files shows also hidden files outside of .git/
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --glob "!.git/*"'
 
 map <leader>n :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\.pyc$', '\~$'] " ignore .pyc files
@@ -275,3 +277,4 @@ function ToggleMouse()
         let g:is_mouse_enabled = 1
     endif
 endfunction
+
