@@ -32,7 +32,7 @@ set hlsearch            " highlight matches
 
 
 " Enable mouse support
-set mouse+=a
+set mouse+=a  " touchpad scrolling
 
 set cursorline " highlight current line
 set wildmenu " visual autocomplete for command menu
@@ -258,3 +258,20 @@ let g:coc_global_extensions = [
 highlight link CocErrorSign Identifier 
 highlight link CocWarningSign Boolean 
 
+
+" toggle mouse support and lines number for easy clipboard copy
+let g:is_mouse_enabled = 1
+noremap <silent> <Leader>m :call ToggleMouse()<CR>
+function ToggleMouse()
+    if g:is_mouse_enabled == 1
+        set mouse-=a
+        set nonumber
+        set signcolumn=no
+        let g:is_mouse_enabled = 0
+    else
+        set mouse+=a
+        set number
+        set signcolumn=yes
+        let g:is_mouse_enabled = 1
+    endif
+endfunction
