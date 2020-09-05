@@ -100,6 +100,12 @@ nmap <leader>r :Rg<cr>       " fuzzy find text in the working directory
 nmap <leader>c :Commands<cr> " fuzzy find Vim commands
 nmap <leader>h :History<cr>  " fuzzy find history
 
+" special bindings to specify a path to fzf commands
+" Using double leader because using double ff for example
+" would slow the response time too much
+nmap <leader><leader>f :Files ~/
+nmap <leader><leader>r :Rg ~/
+
 " Preview window when using Rg
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
