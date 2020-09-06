@@ -56,20 +56,20 @@ call plug#begin('~/.vim/plugged')
 Plug 'joshdick/onedark.vim'
 Plug 'vim-airline/vim-airline'
 " This is used to show the git branch on vim-airline
-Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive' " GBlame <3
 Plug 'airblade/vim-gitgutter'
-Plug 'jiangmiao/auto-pairs'
+Plug 'jiangmiao/auto-pairs' " ()
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround' " easier quoting or changing quotes
+Plug 'tpope/vim-commentary' " gcc to comment, or gc in visual
 Plug 'junegunn/fzf', { 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'dense-analysis/ale'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'dense-analysis/ale' " async linting
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " autocomplete
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'Vimjas/vim-python-pep8-indent' " proper python indentetion for funcs/ dicts..
-Plug 'vim-python/python-syntax'
+Plug 'vim-python/python-syntax' " better python syntax highlighting
 
 " Initialize plugin system
 call plug#end()
