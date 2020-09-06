@@ -289,3 +289,5 @@ function ToggleMouse()
     endif
 endfunction
 
+" automatically remove trailing whitespaces for specified languages
+autocmd FileType python,go autocmd BufWritePre <buffer> %s/\s\+$//e
