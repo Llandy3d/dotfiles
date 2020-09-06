@@ -290,4 +290,18 @@ function ToggleMouse()
 endfunction
 
 " automatically remove trailing whitespaces for specified languages
-autocmd FileType python,go autocmd BufWritePre <buffer> %s/\s\+$//e
+autocmd FileType python,go autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+
+" this function keeps state so that the cursor doesn't jump on the last
+" changed line when saving and removing whitespaces
+function! <SID>StripTrailingWhitespaces()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    %s/\s\+$//e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
