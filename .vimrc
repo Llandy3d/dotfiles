@@ -69,10 +69,13 @@ Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'Vimjas/vim-python-pep8-indent' " proper python indentetion for funcs/ dicts..
+Plug 'vim-python/python-syntax'
 
 " Initialize plugin system
 call plug#end()
 
+" trying out better syntax highlighting for python with python-syntax
+let g:python_highlight_all = 1
 
 let mapleader=" "       " leader is space
 
