@@ -13,6 +13,8 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
+set smartindent
+
 
 " Disable the default Vim startup message.
 set shortmess+=I
@@ -66,6 +68,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+Plug 'Vimjas/vim-python-pep8-indent' " proper python indentetion for funcs/ dicts..
 
 " Initialize plugin system
 call plug#end()
@@ -112,7 +115,8 @@ command! -bang -nargs=* Rg
   \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
   \   fzf#vim#with_preview(), <bang>0)
 
-" fzf :Files shows also hidden files outside of .git/
+" fzf :Files shows also hidden files outside of .git/ and correctly ignores
+" files in .gitignore
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --glob "!.git/*"'
 
 map <leader>n :NERDTreeToggle<CR>
