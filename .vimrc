@@ -110,13 +110,19 @@ nmap <leader>h :History<cr>  " fuzzy find history
 " Using double leader because using double ff for example
 " would slow the response time too much
 nmap <leader><leader>f :Files ~/
-nmap <leader><leader>r :Rg ~/
+nmap <leader><leader>r :DRg ~/
 
 " Preview window when using Rg
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
   \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
   \   fzf#vim#with_preview(), <bang>0)
+
+" Rg with preview from specified directory
+command! -bang -nargs=* -complete=dir DRg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(''), 1,
+  \   fzf#vim#with_preview({'dir': <q-args>}), <bang>0)
 
 " fzf :Files shows also hidden files outside of .git/ and correctly ignores
 " files in .gitignore
@@ -308,3 +314,20 @@ function! <SID>StripTrailingWhitespaces()
     let @/=_s
     call cursor(l, c)
 endfunction
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"     WIP
+" This would call rg on every change of letter, currently requires a path and
+" an initial query, would be better if the first query could be optional
+" NOTE: does not support fuzzy finding
+
+function! RipgrepFzf(directory, query, fullscreen)
+  let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case -- %s || true'
+  let initial_command = printf(command_fmt, shellescape(a:query))
+  let reload_command = printf(command_fmt, '{q}')
+  let spec = {'dir': a:directory, 'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
+  call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
+endfunction
+
+command! -nargs=* -bang -complete=dir RG call RipgrepFzf(<f-args>, <bang>0)
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
