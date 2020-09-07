@@ -1,5 +1,7 @@
 [flake8]
-ignore = E501  # Ignore line too long errors
+# E501: Ignore line too long errors
+# E129: visually indented line with same indent as next logical line 
+ignore = E501,E129
 exclude =
     .git,
     __pycache__,
