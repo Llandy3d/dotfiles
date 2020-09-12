@@ -3,3 +3,4 @@ $include /etc/inputrc
 "\e[B": history-search-forward
 
 set editing-mode vi
+bind -m vi-insert 'Control-l: clear-screen'
