@@ -122,3 +122,10 @@ fi
 
 export PYTHONSTARTUP=~/.pythonrc.py
 export EDITOR=vim VISUAL=vim
+
+# vi command mode
+bind -m vi-command 'k: history-search-backward'
+bind -m vi-command 'j: history-search-forward'
+
+# vi insert mode
+bind -m vi-insert 'Control-l: clear-screen'
