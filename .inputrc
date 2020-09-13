@@ -3,10 +3,3 @@ $include /etc/inputrc
 "\e[B": history-search-forward
 
 set editing-mode vi
-
-set keymap vi-commad
-k: history-search-backward
-j: history-search-forward
-
-set keymap vi-insert
-Control-l: clear-screen
