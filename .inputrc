@@ -4,9 +4,9 @@ $include /etc/inputrc
 
 set editing-mode vi
 
-# vi command mode
-bind -m vi-command 'k: history-search-backward'
-bind -m vi-command 'j: history-search-forward'
+set keymap vi-commad
+k: history-search-backward
+j: history-search-forward
 
-# vi insert mode
-bind -m vi-insert 'Control-l: clear-screen'
+set keymap vi-insert
+Control-l: clear-screen
