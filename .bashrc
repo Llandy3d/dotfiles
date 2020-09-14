@@ -129,3 +129,12 @@ bind -m vi-command 'j: history-search-forward'
 
 # vi insert mode
 bind -m vi-insert 'Control-l: clear-screen'
+
+# start only one ssh-agent and reuse the created one
+# this is used for sway, althou keys added do not persist on reboot
+if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+    ssh-agent > "$XDG_RUNTIME_DIR/ssh-agent.env"
+fi
+if [[ ! "$SSH_AUTH_SOCK" ]]; then
+    source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
+fi
