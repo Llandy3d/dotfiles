@@ -1,5 +1,6 @@
 mkdir -p $HOME/.vim && ln -s $(pwd)/coc-settings.json $HOME/.vim/
 mkdir -p $HOME/.config/sway && ln -s $(pwd)/.config/sway/config $HOME/.config/sway/
+mkdir -p $HOME/.config/alacritty && ln -s $(pwd)/.config/alacritty/alacritty.yml $HOME/.config/alacritty/
 ln -s $(pwd)/.vimrc $HOME/
 ln -s $(pwd)/after $HOME/.vim/
 ln -s $(pwd)/.inputrc $HOME/
