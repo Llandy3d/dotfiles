@@ -220,3 +220,9 @@ bar {
 }
 
 include /etc/sway/config.d/*
+
+# Screenshots
+bindsym Print exec grimshot save screen
+bindsym Shift+Print exec grimshot copy screen
+bindsym Ctrl+Print exec grimshot save area
+bindsym Ctrl+Shift+Print exec grimshot copy area
