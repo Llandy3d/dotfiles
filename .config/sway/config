@@ -237,6 +237,8 @@ bindsym Shift+Print exec grimshot copy screen
 bindsym Ctrl+Print exec grimshot save area
 bindsym Ctrl+Shift+Print exec grimshot copy area
 
+# Hide cursor
+seat seat0 hide_cursor 5000
 
 # Gaps
 smart_gaps on
