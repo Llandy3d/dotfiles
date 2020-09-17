@@ -226,3 +226,12 @@ bindsym Print exec grimshot save screen
 bindsym Shift+Print exec grimshot copy screen
 bindsym Ctrl+Print exec grimshot save area
 bindsym Ctrl+Shift+Print exec grimshot copy area
+
+
+# Gaps
+smart_gaps on
+gaps inner 10
+
+# Borders
+default_border pixel 2
+
