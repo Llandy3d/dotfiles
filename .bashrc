@@ -118,10 +118,13 @@ fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-[ -d "$HOME/bin" ] && export PATH="${HOME}/bin:${PATH}"
 
 export PYTHONSTARTUP=~/.pythonrc.py
 export EDITOR=vim VISUAL=vim
+
+
+# add .local/bin to path
+export PATH="${HOME}/.local/bin:${PATH}"
 
 # vi command mode
 bind -m vi-command 'k: history-search-backward'
