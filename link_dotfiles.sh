@@ -12,4 +12,4 @@ ln -s $(pwd)/.config/waybar $HOME/.config/
 rm $HOME/.bashrc && ln -s $(pwd)/.bashrc $HOME/
 
 for file in $(pwd)/bin/* ; do ln -s $file $HOME/.local/bin/ ; done
-
+mkdir -p $HOME/.fonts && for file in $(pwd)/.fonts/* ; do ln -s "$file" $HOME/.fonts/ ; done
