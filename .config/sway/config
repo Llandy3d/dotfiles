@@ -237,6 +237,10 @@ bindsym Shift+Print exec grimshot copy screen
 bindsym Ctrl+Print exec grimshot save area
 bindsym Ctrl+Shift+Print exec grimshot copy area
 
+# Mako
+bindsym $mod+n exec makoctl dismiss
+bindsym $mod+Shift+n exec makoctl dismiss -a
+
 # Hide cursor
 seat seat0 hide_cursor 5000
 
@@ -250,3 +254,5 @@ default_border pixel 2
 # Windows config
 for_window [app_id="^launcher$"] floating enable, border none, opacity 0.8
 
+# Start programs
+exec mako
