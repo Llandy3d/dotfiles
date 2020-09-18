@@ -331,3 +331,6 @@ endfunction
 
 command! -nargs=* -bang -complete=dir RG call RipgrepFzf(<f-args>, <bang>0)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" let vim use terminal transparency
+hi Normal guibg=NONE ctermbg=NONE
