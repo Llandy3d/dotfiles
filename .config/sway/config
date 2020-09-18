@@ -232,10 +232,14 @@ bar {
 include /etc/sway/config.d/*
 
 # Screenshots
-bindsym Print exec grimshot save screen
-bindsym Shift+Print exec grimshot copy screen
-bindsym Ctrl+Print exec grimshot save area
-bindsym Ctrl+Shift+Print exec grimshot copy area
+# currently having a custom grimshot under .local/bin
+# for now this will do...
+set $grimshot ~/.local/bin/grimshot
+
+bindsym Print exec $grimshot --notify save screen
+bindsym Shift+Print exec $grimshot --notify copy screen
+bindsym Ctrl+Print exec $grimshot --notify save area
+bindsym Ctrl+Shift+Print exec $grimshot --notify copy area
 
 # Mako
 bindsym $mod+n exec makoctl dismiss
