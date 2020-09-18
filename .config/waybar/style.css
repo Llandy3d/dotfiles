@@ -9,7 +9,7 @@
 
 window#waybar {
     background-color: rgba(43, 48, 59, 0.5);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+    /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
@@ -39,6 +39,7 @@ window#waybar.chromium {
 
 #workspaces button {
     padding: 0 5px;
+    padding-top: 7px;
     background-color: transparent;
     color: #ffffff;
     border-bottom: 3px solid transparent;
@@ -53,7 +54,7 @@ window#waybar.chromium {
 
 #workspaces button.focused {
     background-color: #64727D;
-    border-bottom: 3px solid #ffffff;
+    /* border-bottom: 3px solid #ffffff; */
 }
 
 #workspaces button.urgent {
@@ -62,7 +63,7 @@ window#waybar.chromium {
 
 #mode {
     background-color: #64727D;
-    border-bottom: 3px solid #ffffff;
+    /* border-bottom: 3px solid #ffffff; */
 }
 
 #clock,
@@ -84,7 +85,7 @@ window#waybar.chromium {
 }
 
 #clock {
-    background-color: #64727D;
+    /* background-color: #64727D; */
 }
 
 #battery {
@@ -119,12 +120,12 @@ label:focus {
 }
 
 #cpu {
-    background-color: #2ecc71;
-    color: #000000;
+    /* background-color: #2ecc71; */
+    /* color: #000000; */
 }
 
 #memory {
-    background-color: #9b59b6;
+    /* background-color: #9b59b6; */
 }
 
 #backlight {
@@ -132,7 +133,7 @@ label:focus {
 }
 
 #network {
-    background-color: #2980b9;
+    /* background-color: #2980b9; */
 }
 
 #network.disconnected {
@@ -140,13 +141,13 @@ label:focus {
 }
 
 #pulseaudio {
-    background-color: #f1c40f;
-    color: #000000;
+    /* background-color: #f1c40f; */
+    /* color: #000000; */
 }
 
 #pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
+    /* background-color: #90b1b1; */
+    /* color: #2a5c45; */
 }
 
 #custom-media {
@@ -176,11 +177,11 @@ label:focus {
 }
 
 #idle_inhibitor {
-    background-color: #2d3436;
+    /* background-color: #2d3436; */
 }
 
 #idle_inhibitor.activated {
-    background-color: #ecf0f1;
+    /* background-color: #ecf0f1; */
     color: #2d3436;
 }
 
