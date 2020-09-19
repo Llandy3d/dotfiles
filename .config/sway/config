@@ -267,6 +267,9 @@ for_window [title="\ -\ Sharing\ Indicator$"] floating enable, sticky enable
 # Start programs
 exec mako
 
+exec swaymsg "workspace 9; exec firefox  --new-instance --private-window https://google.com;"
+exec swaymsg "workspace 1;"
+
 # volume / brightness / media controls
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
