@@ -9,6 +9,7 @@ ln -s $(pwd)/.gitconfig $HOME/
 ln -s $(pwd)/.pam_environment $HOME/
 ln -s $(pwd)/.config/sway $HOME/.config
 ln -s $(pwd)/.config/waybar $HOME/.config/
+ln -s $(pwd)/.config/mako $HOME/.config/
 rm $HOME/.bashrc && ln -s $(pwd)/.bashrc $HOME/
 
 for file in $(pwd)/bin/* ; do ln -s $file $HOME/.local/bin/ ; done
