@@ -50,7 +50,7 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
 exec swayidle -w \
-         timeout 300 'create_lock_image && swaylock -f -i /tmp/sway_lock_image.png' \
+         timeout 300 '~/.local/bin/create_lock_image && swaylock -f -i /tmp/sway_lock_image.png' \
          timeout 600 'swaymsg "output * dpms off"' \
               resume 'swaymsg "output * dpms on"' \
          before-sleep 'swaylock -f -c 000000'
@@ -267,8 +267,7 @@ for_window [title="\ -\ Sharing\ Indicator$"] floating enable, sticky enable
 # Start programs
 exec mako
 
-exec swaymsg "workspace 9; exec firefox  --new-instance --private-window https://google.com;"
-exec swaymsg "workspace 1;"
+exec swaymsg "workspace 9; exec firefox  --new-instance --private-window https://google.com; workspace 1;"
 
 # volume / brightness / media controls
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
