@@ -258,6 +258,7 @@ default_border pixel 2
 
 # Windows config
 for_window [app_id="^launcher$"] floating enable, border none, opacity 0.8
+for_window [app_id="^pavucontrol$"] floating enable
 
 # Start programs
 exec mako
