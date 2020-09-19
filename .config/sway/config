@@ -260,6 +260,10 @@ default_border pixel 2
 for_window [app_id="^launcher$"] floating enable, border none, opacity 0.8
 for_window [app_id="^pavucontrol$"] floating enable
 
+# this makes the popup window for mic access small and stickied instead of an
+# extra window, this will work until it's fixed in firefox
+for_window [title="\ -\ Sharing\ Indicator$"] floating enable, sticky enable
+
 # Start programs
 exec mako
 
