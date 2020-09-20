@@ -89,13 +89,13 @@ window#waybar.chromium {
 }
 
 #battery {
-    background-color: #ffffff;
-    color: #000000;
+    /* background-color: #ffffff; */
+    /* color: #000000; */
 }
 
 #battery.charging {
-    color: #ffffff;
-    background-color: #26A65B;
+    /* color: #ffffff; */
+    /* background-color: #26A65B; */
 }
 
 @keyframes blink {
