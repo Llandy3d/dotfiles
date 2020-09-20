@@ -73,6 +73,12 @@ input "type:keyboard" {
     xkb_options altwin:swap_lalt_lwin,caps:escape
 }
 
+input "type:touchpad" {
+    dwt enabled
+    tap enabled
+    natural_scroll enabled
+}
+
 ### Key bindings
 #
 # Basics:
