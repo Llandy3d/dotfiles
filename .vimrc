@@ -155,6 +155,13 @@ let g:ale_linters = {
 \   'python': ['flake8'],
 \}
 
+" run rustfmt on save
+let g:ale_fixers = {
+\   'rust': ['rustfmt'],
+\}
+
+let g:ale_fix_on_save = 1
+
 " virtualenv support 
 " NOTE: to be tested
 py3 << EOF
@@ -273,7 +280,8 @@ xmap <silent> <TAB> <Plug>(coc-range-select)
 nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
 
 let g:coc_global_extensions = [
-    \ 'coc-python'
+    \ 'coc-python',
+    \ 'coc-rust-analyzer'
     \ ]
 
 " use onedark colors for Error & Warning 
