@@ -70,6 +70,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} " autocomplete
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'Vimjas/vim-python-pep8-indent' " proper python indentetion for funcs/ dicts..
 Plug 'vim-python/python-syntax' " better python syntax highlighting
+Plug 'preservim/tagbar'
 
 " Initialize plugin system
 call plug#end()
@@ -342,3 +343,5 @@ command! -nargs=* -bang -complete=dir RG call RipgrepFzf(<f-args>, <bang>0)
 
 " let vim use terminal transparency
 hi Normal guibg=NONE ctermbg=NONE
+
+nmap <F8> :TagbarToggle<CR>
