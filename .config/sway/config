@@ -292,3 +292,7 @@ bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+
+# swap monitor focus
+bindsym $mod+Tab focus output eDP-1
+bindsym $mod+Shift+Tab focus output HDMI-A-1
