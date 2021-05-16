@@ -71,6 +71,7 @@ Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'Vimjas/vim-python-pep8-indent' " proper python indentetion for funcs/ dicts..
 Plug 'vim-python/python-syntax' " better python syntax highlighting
 Plug 'preservim/tagbar'
+Plug 'cespare/vim-toml' " toml syntax highlight
 
 " Initialize plugin system
 call plug#end()
