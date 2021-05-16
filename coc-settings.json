@@ -3,6 +3,7 @@
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
     "python.linting.flake8Path": "~/.local/bin/flake8",
+    "rust-analyzer.checkOnSave.command": "clippy",
     "coc.preferences.diagnostic.displayByAle": true,
     "languageserver": {
         "golang": {

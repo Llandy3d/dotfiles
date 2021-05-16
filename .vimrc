@@ -39,6 +39,9 @@ set mouse+=a  " touchpad scrolling
 set cursorline " highlight current line
 set wildmenu " visual autocomplete for command menu
 
+" diagnostics run by coc and sent to ale
+let g:ale_disable_lsp = 1
+
 " Install VimPlug
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -155,6 +158,7 @@ endif
 " Use ale for having linting without saving the buffer
 let g:ale_linters = {
 \   'python': ['flake8'],
+\   'rust': [''],
 \}
 
 " run rustfmt on save
