@@ -1,4 +1,5 @@
 mkdir -p $HOME/.vim && ln -s $(pwd)/coc-settings.json $HOME/.vim/
+mkdir -p $HOME/.vim/swp
 mkdir -p $HOME/.config/alacritty && ln -s $(pwd)/.config/alacritty/alacritty.yml $HOME/.config/alacritty/
 ln -s $(pwd)/.vimrc $HOME/
 ln -s $(pwd)/after $HOME/.vim/

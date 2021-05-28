@@ -39,6 +39,8 @@ set mouse+=a  " touchpad scrolling
 set cursorline " highlight current line
 set wildmenu " visual autocomplete for command menu
 
+set directory=~/.vim/swp// " swap files in specific place
+
 " diagnostics run by coc and sent to ale
 let g:ale_disable_lsp = 1
 
