@@ -288,7 +288,7 @@ xmap <silent> <TAB> <Plug>(coc-range-select)
 nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
 
 let g:coc_global_extensions = [
-    \ 'coc-python',
+    \ 'coc-pyright',
     \ 'coc-rust-analyzer'
     \ ]
 
